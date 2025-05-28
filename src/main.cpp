@@ -57,7 +57,7 @@ gasCoefficients[] = {
   {27.63596952 , -3.874510413 },           // c6h6
 
 };
-float R0 = 134.81;    // Giá trị R0 (Điện trở của cảm biến trong không khí sạch)
+float R0 = 203.12;    // Giá trị R0 (Điện trở của cảm biến trong không khí sạch)
 float Rload = 36;
 DHT dht(DHTPIN, DHTTYPE);
 //MQ135 mq135_sensor(PIN_MQ135, R0, Rload );
@@ -326,32 +326,30 @@ void loop()
 // #include <Arduino.h>
 // #include <MQ135.h>
 
-// #define MQ135_PIN 34  // Thay bằng chân bạn đang kết nối
-// float Rload = 36;    // Nếu bạn dùng mạch sẵn thì thường là 1k
+// #define MQ135_PIN 34  // 
+// float Rload = 36;    // 
 
-// MQ135 mq135_sensor(MQ135_PIN, 1.0, Rload); // Khởi tạo tạm với R0=1.0 (sẽ tính lại)
+// MQ135 mq135_sensor(MQ135_PIN, 1.0, Rload); // Khởi tạo tạm với R0=1.0 
 
 // void setup() {
 //   Serial.begin(9600);
-//   analogReadResolution(10); // Đảm bảo độ phân giải analog đúng
-//   delay(2000); // Chờ sensor ổn định
+//   analogReadResolution(10);
+//   delay(2000); // 
 
 //   Serial.println("Calibrating R0...");
 //   float rs = mq135_sensor.getResistance();
 
-//   // Theo datasheet MQ135, tỉ lệ RS/R0 trong không khí sạch là khoảng 3.6
-//   float R0 = rs / 0.62573;
+//   // Theo datasheet MQ135, tỉ lệ RS/R0 trong không khí sạch là khoảng
+//   float R0 = rs / 0.6179480415;
 
 //   Serial.print("RS = ");
 //   Serial.println(rs);
 //   Serial.print("R0 (calibrated) = ");
 //   Serial.println(R0);
 
-//   Serial.println("\nSao chép giá trị R0 này và thay vào chương trình chính của bạn.");
 // }
 
 // void loop() {
-//   // Không làm gì trong loop
 // }
 
  
