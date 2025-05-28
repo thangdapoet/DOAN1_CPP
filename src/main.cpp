@@ -57,7 +57,7 @@ gasCoefficients[] = {
   {27.63596952 , -3.874510413 },           // c6h6
 
 };
-float R0 = 203.12;    // Giá trị R0 (Điện trở của cảm biến trong không khí sạch)
+float R0 = 203.12;   
 float Rload = 36;
 DHT dht(DHTPIN, DHTTYPE);
 //MQ135 mq135_sensor(PIN_MQ135, R0, Rload );
@@ -93,19 +93,19 @@ void updateLCD(float temp, float humi, float ppm)
   lcd.print(" ppm  ");
 
   // warning
-  lcd.setCursor(0, 3);
-  if ((currentGas == CO2 && ppm > 1100) ||
-      (currentGas == CO && ppm > 32) ||
-      (currentGas == NH3 && ppm > 35) ||
-      (currentGas == Toluen && ppm > 200) ||
-      (currentGas == C6H6 && ppm > 1))
-  {
-    lcd.print("Dangerous! ");
-  }
-  else
-  {
-    lcd.print("            ");
-  }
+  // lcd.setCursor(0, 3);
+  // if ((currentGas == CO2 && ppm > 1100) ||
+  //     (currentGas == CO && ppm > 32) ||
+  //     (currentGas == NH3 && ppm > 35) ||
+  //     (currentGas == Toluen && ppm > 200) ||
+  //     (currentGas == C6H6 && ppm > 1))
+  // {
+  //   lcd.print("Dangerous! ");
+  // }
+  // else
+  // {
+  //   lcd.print("            ");
+  // }
 }
 
 void connectToWiFi()
@@ -329,7 +329,7 @@ void loop()
 // #define MQ135_PIN 34  // 
 // float Rload = 36;    // 
 
-// MQ135 mq135_sensor(MQ135_PIN, 1.0, Rload); // Khởi tạo tạm với R0=1.0 
+// MQ135 mq135_sensor(MQ135_PIN, 1.0, Rload); // 
 
 // void setup() {
 //   Serial.begin(9600);
@@ -339,7 +339,7 @@ void loop()
 //   Serial.println("Calibrating R0...");
 //   float rs = mq135_sensor.getResistance();
 
-//   // Theo datasheet MQ135, tỉ lệ RS/R0 trong không khí sạch là khoảng
+//   // Theo datasheet MQ135, ti le rs/ro trong kk sach
 //   float R0 = rs / 0.6179480415;
 
 //   Serial.print("RS = ");
