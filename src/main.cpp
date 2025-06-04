@@ -7,10 +7,10 @@
 #include <DHT.h>
 #include <MQ135.h>
 
-const char *ssid = "THANG";
+const char *ssid = "THANGDAPOET";
 const char *password = "15112004";
-const char *serverUrl = "http://192.168.1.8:8000/api/sensor-data";
-const char *serverSessionUrl = "http://192.168.1.8:8000/session/";
+const char *serverUrl = "http://192.168.16.223:8000/api/sensor-data";
+const char *serverSessionUrl = "http://192.168.16.223:8000/session/";
 int sessionId = -1;
 
 #define DHTPIN 0
@@ -57,7 +57,7 @@ gasCoefficients[] = {
   {27.63596952 , -3.874510413 },           // c6h6
 
 };
-float R0 = 203.12;   
+float R0 = 194.27;   
 float Rload = 36;
 DHT dht(DHTPIN, DHTTYPE);
 //MQ135 mq135_sensor(PIN_MQ135, R0, Rload );
